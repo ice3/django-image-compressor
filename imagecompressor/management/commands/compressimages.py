@@ -31,7 +31,7 @@ class Command(BaseCommand):
         except AttributeError:
             IMAGE_COMPRESS_ROOT = Path('IMAGES')
 
-        staticfiles_manifest_path = STATIC_ROOT / 'staticfiles.json'
+        staticfiles_manifest_path = str(STATIC_ROOT / 'staticfiles.json')
         images_directory = STATIC_ROOT / IMAGE_COMPRESS_ROOT
         search_path = STATIC_ROOT / options['path']
 
